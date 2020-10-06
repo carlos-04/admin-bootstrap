@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Panel Administrativo</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-auto barra-lateral">
+                <div class="logo">
+                    <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+                </div>
+
+                <nav class="menu d-flex d-sm-block  flex-wrap justify-content-center">
+                    <a href="#"><i class="fas fa-home"></i><span>Inicio</span> </a>
+                    <a href="#"><i class="fas fa-file-alt"></i> <span>Entradas</span> </a>
+                    <a href="#"><i class="fas fa-users"></i><span>Usuarios</span> </a>
+                    <a href="#"><i class="fas fa-cog"></i><span>Configuracion</span> </a>
+                    <a href="#"><i class="fas fa-sign-out-alt"></i><span>Salir</span> </a>
+                </nav>
+            </div>
+
+
+            <main class="main col">
+                <div class="row ">
+                    <div class="col-lg-7 columna">
+
+                        <div class="grafica ">
+                            <h3 class="titulo">Grafica</h3>
+                            <canvas id="lineChart" class="w-100"></canvas>
+                        </div>
+
+                        <div class="widget nueva-entrada mt-5">
+                            <h3 class="titulo">Nueva Entrada</h3>
+                            <form method="get" action="">
+                                <input type="text" placeholder="Titulo Nuevo">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut nunc vestibulum, maximus leo vel, laoreet mi. In sed neque sed nulla egestas vehicula id in mauris. Donec eros diam, blandit nec lacus at, molestie suscipit nisl. Aenean ut orci efficitur dolor rhoncus commodo."></textarea>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 columna">
+                        <div class="widget estadisticas">
+                            <h3 class="titulo">Estadisticas</h3>
+
+                            <div class="contenedor d-flex flex-wrap">
+                                <div class="caja">
+                                    <i class="far fa-eye"></i>
+                                    <h3>15,236</h3>
+                                    <p>Visitas</p>
+                                </div>
+                                <div class="caja">
+                                    <i class="far fa-clipboard"></i>
+                                    <h3>15,236</h3>
+                                    <p>Registros</p>
+                                </div>
+                                <div class="caja">
+                                    <i class="fas fa-chart-line"></i>
+                                    <h3>15,236</h3>
+                                    <p>Ingresos</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="widget comentarios">
+                            <h3 class="titulo">Comentarios</h3>
+                            <div class="contenedor">
+                                <div class="comentario d-flex flex-wrap">
+                                    <div class="foto">
+                                        <a href="#">
+                                            <img src="img/61493417_2261743770809224_784545239120478208_n.jpg" alt="" width="100" class="img-fluid">
+                                        </a>
+                                    </div>
+
+                                    <div class="texto">
+                                        <a href="#">Carlos Montero</a>
+                                        <p>en <a href="#">Mi primer entrada</a></p>
+                                        <p class="texto-comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium, quasi ut autem minima aspernatur!</p>
+                                    </div>
+
+                                    <div class="botones d-flex justify-content-start flex-wrap w-100">
+
+                                        <button class="aprobar "><i class="fas fa-check-circle"></i> Aprobar</button>
+                                        <button class="eliminar "><i class="fas fa-minus-circle"></i> Eliminar</button>
+                                        <button class="bloquear"><i class="fas fa-ban"></i> Bloquear Usuario</button>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="comentario d-flex flex-wrap">
+                                    <div class="foto">
+                                        <a href="#">
+                                            <img src="img/WhatsApp Image 2020-09-28 at 4.25.04 PM.jpeg" alt="" width="100" class="img-fluid">
+                                        </a>
+                                    </div>
+
+                                    <div class="texto">
+                                        <a href="#">Carines Diaz</a>
+                                        <p>en <a href="#">Mi primer entrada</a></p>
+                                        <p class="texto-comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium, quasi ut autem minima aspernatur!</p>
+                                    </div>
+
+                                    <div class="botones d-flex justify-content-start flex-wrap w-100">
+
+                                        <button class="aprobar "><i class="fas fa-check-circle"></i> Aprobar</button>
+                                        <button class="eliminar "><i class="fas fa-minus-circle"></i> Eliminar</button>
+                                        <button class="bloquear"><i class="fas fa-ban"></i> Bloquear Usuario</button>
+
+
+                                    </div>
+                                </div>
+                                <div class="comentario d-flex flex-wrap">
+                                    <div class="foto">
+                                        <a href="#">
+                                            <img src="img/pp.jpg" alt="" width="100" class="img-fluid">
+                                        </a>
+                                    </div>
+
+                                    <div class="texto">
+                                        <a href="#">Cristopher Deoleo</a>
+                                        <p>en <a href="#">Mi primer entrada</a></p>
+                                        <p class="texto-comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium, quasi ut autem minima aspernatur!</p>
+                                    </div>
+
+                                    <div class="botones d-flex justify-content-start flex-wrap w-100">
+
+                                        <button class="aprobar "><i class="fas fa-check-circle"></i> Aprobar</button>
+                                        <button class="eliminar "><i class="fas fa-minus-circle"></i> Eliminar</button>
+                                        <button class="bloquear"><i class="fas fa-ban"></i> Bloquear Usuario</button>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </main>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-white"><b> © 2020 Copyright: Carlos Montero</b>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+</body>
+
+</html>
